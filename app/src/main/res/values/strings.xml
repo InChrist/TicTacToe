@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="opponent_human">Play vs Friend</string>
+    <string name="opponent_cpu">Play vs CPU</string>
+    <string name="grid_3">3x3 Grid</string>
+    <string name="grid_5">5x5 Grid</string>
+    <string name="restart_round">Restart Round</string>
+    <string name="scores">Scores</string>
+    <string name="reset_scores">Reset Scores</string>
+    <string name="opponent">Opponent</string>
+    <string name="size">Size</string>
+    <string name="i_am">I am…</string>
+    <string name="cpu">CPU</string>
+    <string name="friend">Friend</string>
+    <string name="cross">†</string>
+    <string name="nought">Ꙩ</string>
+
+
+
+
+</resources>

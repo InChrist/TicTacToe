@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kingsley.tictactoe.Grid3Activity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/grid_3"
+        android:scaleType="centerInside"
+        android:src="@drawable/google_pixel" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_margin="20dp">
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="120dp" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            />
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            />
+
+    </GridLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+        
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" 
+            android:text="@string/restart_round"
+            android:onClick="restart"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/scores"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_scores"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
