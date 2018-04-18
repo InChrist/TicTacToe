@@ -6,5 +6,11 @@
     tools:context="com.example.kingsley.tictactoe.Grid5Activity"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/under_construction" />
+
 
 </RelativeLayout>

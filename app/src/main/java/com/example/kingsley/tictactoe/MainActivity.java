@@ -1,8 +1,8 @@
 package com.example.kingsley.tictactoe;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -10,7 +10,8 @@ import android.widget.RadioButton;
 public class MainActivity extends AppCompatActivity {
 
     private boolean isNoughts;
-
+    private boolean isGrid3;
+    private boolean vsCpu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,30 +26,31 @@ public class MainActivity extends AppCompatActivity {
         RadioButton nutsRadioButton = findViewById(R.id.nuts_radio);
         final Button playButton = findViewById(R.id.play_button);
 
-
         cpuRadioButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playButton.setText(R.string.opponent_cpu);
+                vsCpu = true;
             }
         });
 
         friendRadioButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playButton.setText(R.string.opponent_human);
+                vsCpu = false;
             }
         });
 
         grid3RadioButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isGrid3 = true;
             }
         });
 
         grid5RadioButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isGrid3 = false;
             }
         });
 
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent3();
+                selectIntent(isGrid3);
             }
         });
     }
@@ -78,6 +80,17 @@ public class MainActivity extends AppCompatActivity {
         Intent grid3Intent = new Intent(this, Grid3Activity.class);
         grid3Intent.putExtra("I am", isNoughts);
         startActivity(grid3Intent);
+    }
+
+    private void intent5() {
+        Intent grid5Intent = new Intent(this, Grid5Activity.class);
+        startActivity(grid5Intent);
+    }
+
+    private void selectIntent(boolean state) {
+        if (state)
+            intent3();
+        else intent5();
     }
 
 }

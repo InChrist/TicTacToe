@@ -1,7 +1,7 @@
 package com.example.kingsley.tictactoe;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -112,6 +112,7 @@ public class Grid3Activity extends AppCompatActivity {
         if (!view.isEnabled()) {
             for (int i = 0; !buttons[i].isEnabled(); i++) {
 
+
                 if (i > buttons.length) return;
             }
         } else {
@@ -129,5 +130,6 @@ public class Grid3Activity extends AppCompatActivity {
     }
 
     public void restart(View view) {
+        recreate();
     }
 }
